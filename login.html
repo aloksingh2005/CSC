@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CSC Seva Center - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Preload essential resources -->
+    <link rel="preload" href="./login.js" as="script">
+    <link rel="preload" href="img/logo.png" as="image">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+919990996403"><i class="fas fa-phone"></i> +91 9990996403, 9205056775</a>
+                    <a href="mailto:help@cscsevacenter.org"><i class="fas fa-envelope"></i> help@cscsevacenter.org</a>
+                </div>
+                <div class="login-digital">
+                    <a href="login.html" class="login-btn active"><i class="fas fa-lock"></i> Login</a>
+                    <a href="register.html" class="apply-link">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="CSC Seva Center">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li class="dropdown">
+                            <a href="#">Apply <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="register.html">New Registration</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="register.html">Apply Now</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Section -->
+    <div class="login-section">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-card-left">
+                    <div class="login-logo">
+                        <img src="img/logo.png" alt="CSC Seva Center Logo">
+                    </div>
+                    <h2>Welcome Back!</h2>
+                    <p>Access your account to manage your services and transactions with ease.</p>
+                    <div class="login-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Secure Login</h3>
+                                <p>Your data is encrypted and safely stored</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Track Progress</h3>
+                                <p>Monitor your transactions in real-time</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>24/7 Support</h3>
+                                <p>Get help whenever you need it</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-help">
+                        <p>New to CSC Seva Center?</p>
+                        <a href="register.html" class="register-link">Register Now</a>
+                    </div>
+                </div>
+                <div class="login-card-right">
+                    <div class="form-header">
+                        <h2>Login to Your Account</h2>
+                        <p>Enter your credentials to access your dashboard</p>
+                    </div>
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="username">Username or Email</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="username" name="username"
+                                    placeholder="Enter your username or email" required>
+                            </div>
+                            <span class="form-error" id="usernameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="Enter your password"
+                                    required>
+                                <button type="button" class="toggle-password" tabindex="-1">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="form-error" id="passwordError"></span>
+                        </div>
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="login-btn-submit">
+                            <span class="btn-text">Login</span>
+                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                        <div class="or-divider">
+                            <span>or login with</span>
+                        </div>
+                        <div class="social-login">
+                            <button type="button" class="social-btn google">
+                                <img src="img\google_icon.png" alt="Google">
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Apply Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Get In Touch</h3>
+                        <p><i class="fas fa-phone"></i> +91 9990996403</p>
+                        <p><i class="fas fa-envelope"></i> help@cscsevacenter.org</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Stay Connected</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="copyright">
+                    Copyright © 2023. All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./login.js" defer></script>
+</body>
+
+</html>
